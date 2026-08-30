@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Marcos Paulo Corazza Cassiano Leite — Desenvolvedor de Software</title>
+<meta name="description" content="Portfólio e currículo online de Marcos Paulo Corazza Cassiano Leite, estudante de Ciência da Computação e desenvolvedor de software." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+
+<!-- ===== PROGRESS / SCROLL INDICATOR ===== -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#home" class="navbar__brand">
+      <span class="navbar__dot" aria-hidden="true"></span>
+      <span class="navbar__brand-text">marcos<span class="accent">.dev</span></span>
+    </a>
+
+    <nav class="navbar__nav" id="navMenu" aria-label="Navegação principal">
+      <a href="#home" class="navbar__link" data-nav>Home</a>
+      <a href="#sobre" class="navbar__link" data-nav>Sobre</a>
+      <a href="#habilidades" class="navbar__link" data-nav>Habilidades</a>
+      <a href="#projetos" class="navbar__link" data-nav>Projetos</a>
+      <a href="#formacao" class="navbar__link" data-nav>Formação</a>
+      <a href="#curriculo" class="navbar__link" data-nav>Currículo</a>
+      <a href="#contato" class="navbar__link navbar__link--cta" data-nav>Contato</a>
+    </nav>
+
+    <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HOME ===== -->
+  <section class="section hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__grid"></div>
+      <div class="hero__glow"></div>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__content">
+        <p class="eyebrow">// bem-vindo</p>
+        <h1 class="hero__title">
+          Olá, eu sou <span class="accent">Marcos Paulo</span>
+        </h1>
+        <h2 class="hero__subtitle">Desenvolvedor de Software</h2>
+        <p class="hero__text">
+          Estudante de Ciência da Computação apaixonado por tecnologia e desenvolvimento de sistemas.
+          Tenho interesse em criar soluções eficientes, aprender novas tecnologias e transformar ideias
+          em aplicações funcionais.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projetos" class="btn btn--primary">Ver meus projetos</a>
+          <!-- TODO: substitua pelo caminho real do PDF do currículo -->
+          <a href="curriculo.pdf" download class="btn btn--ghost">Baixar currículo</a>
+          <a href="#contato" class="btn btn--text">Entrar em contato →</a>
+        </div>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="editor">
+          <div class="editor__topbar">
+            <span class="editor__dot editor__dot--red"></span>
+            <span class="editor__dot editor__dot--yellow"></span>
+            <span class="editor__dot editor__dot--green"></span>
+            <span class="editor__filename">perfil.cs</span>
+          </div>
+          <div class="editor__body">
+            <pre class="editor__code" id="typedCode"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#sobre" class="scroll-hint" aria-label="Rolar para a próxima seção">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <p class="eyebrow reveal">// sobre mim</p>
+      <h2 class="section-title reveal">Trajetória &amp; interesses</h2>
+
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            Sou estudante de <strong>Ciência da Computação</strong>, com foco no desenvolvimento de software
+            e interesse crescente por banco de dados e desenvolvimento web. Ao longo da minha formação venho
+            construindo projetos práticos em <strong>C#</strong> e <strong>.NET</strong>, explorando desde
+            interfaces desktop com Windows Forms até a modelagem e manipulação de dados com
+            <strong> SQL Server</strong>.
+          </p>
+          <p>
+            Gosto de entender como os sistemas funcionam por dentro: da lógica de negócio ao relacionamento
+            entre tabelas de um banco de dados. Busco aprender continuamente, seja explorando novas
+            tecnologias, seja aprofundando conceitos de programação, sempre com o objetivo de escrever
+            código organizado e soluções que façam sentido para quem as utiliza.
+          </p>
+          <p>
+            Atualmente estou em busca de oportunidades de <strong>estágio</strong> ou <strong>primeiro emprego</strong>
+            na área de desenvolvimento, onde eu possa aplicar o que aprendi, colaborar em equipe e continuar
+            evoluindo como desenvolvedor.
+          </p>
+        </div>
+
+        <div class="about__highlights reveal">
+          <ul class="tag-list">
+            <li>Ciência da Computação</li>
+            <li>Desenvolvimento de Software</li>
+            <li>C#</li>
+            <li>.NET</li>
+            <li>Banco de Dados</li>
+            <li>SQL Server</li>
+            <li>Desenvolvimento Web</li>
+            <li>Aprendizado contínuo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HABILIDADES ===== -->
+  <section class="section section--alt" id="habilidades">
+    <div class="container">
+      <p class="eyebrow reveal">// habilidades</p>
+      <h2 class="section-title reveal">Tecnologias que utilizo</h2>
+      <p class="section-subtitle reveal">
+        Organizadas por área — sem números inventados, apenas o que efetivamente utilizo e estudo.
+      </p>
+
+      <div class="skills__grid">
+        <div class="skill-card reveal">
+          <div class="skill-card__icon" aria-hidden="true">⌘</div>
+          <h3>Linguagens</h3>
+          <ul class="tag-list tag-list--sm">
+            <li>C#</li><li>Python</li><li>SQL</li><li>JavaScript</li><li>HTML</li><li>CSS</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon" aria-hidden="true">▣</div>
+          <h3>Desenvolvimento</h3>
+          <ul class="tag-list tag-list--sm">
+            <li>.NET</li><li>Windows Forms</li><li>Desenvolvimento Web</li><li>ADO.NET</li><li>APIs</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon" aria-hidden="true">▤</div>
+          <h3>Banco de Dados</h3>
+          <ul class="tag-list tag-list--sm">
+            <li>SQL Server</li><li>SQL Server LocalDB</li><li>Modelagem de dados</li><li>CRUD</li><li>Relacionamentos &amp; JOINs</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon" aria-hidden="true">✦</div>
+          <h3>Ferramentas</h3>
+          <ul class="tag-list tag-list--sm">
+            <li>Visual Studio</li><li>Git</li><li>GitHub</li><li>VS Code</li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card__icon" aria-hidden="true">◇</div>
+          <h3>Conceitos de programação</h3>
+          <ul class="tag-list tag-list--sm">
+            <li>Lógica de programação</li><li>Orientação a objetos</li><li>Estruturas de dados básicas</li><li>Boas práticas de código</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJETOS ===== -->
+  <section class="section" id="projetos">
+    <div class="container">
+      <p class="eyebrow reveal">// projetos</p>
+      <h2 class="section-title reveal">Projetos desenvolvidos</h2>
+      <p class="section-subtitle reveal">
+        Projetos acadêmicos e pessoais construídos para praticar desenvolvimento de sistemas e banco de dados.
+      </p>
+
+      <div class="projects__grid">
+
+        <article class="project-card reveal">
+          <div class="project-card__glow" aria-hidden="true"></div>
+          <div class="project-card__body">
+            <h3>NavCode Books</h3>
+            <div class="tag-list tag-list--sm">
+              <span>C#</span><span>.NET</span><span>Windows Forms</span><span>SQL Server</span>
+            </div>
+            <p class="project-card__desc">
+              Sistema para gerenciamento de biblioteca infantil, permitindo cadastro de alunos, turmas e
+              livros, controle de empréstimos e devoluções e gerenciamento de sugestões de leitura.
+            </p>
+            <ul class="project-card__features">
+              <li>Cadastro de alunos, turmas e livros</li>
+              <li>Empréstimos e devoluções</li>
+              <li>Controle de disponibilidade dos livros</li>
+              <li>Sugestões de leitura</li>
+              <li>Relacionamento com banco de dados</li>
+            </ul>
+          </div>
+          <div class="project-card__actions">
+            <!-- TODO: adicionar link do projeto (demo, vídeo, etc.) -->
+            <a href="https://github.com/Marcospcassiano/NavCodeBooks" class="btn btn--sm btn--primary">Ver projeto</a>
+            <!-- TODO: adicionar link do repositório no GitHub -->
+            <a href="https://github.com/Marcospcassiano/NavCodeBooks" class="btn btn--sm btn--ghost">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__glow" aria-hidden="true"></div>
+          <div class="project-card__body">
+            <h3>NavCode Control</h3>
+            <div class="tag-list tag-list--sm">
+              <span>C#</span><span>.NET</span><span>Windows Forms</span><span>SQL Server</span>
+            </div>
+            <p class="project-card__desc">
+              Sistema para gerenciamento de clientes, produtos, pedidos e usuários, com integração com banco
+              de dados e geração de informações para controle do negócio.
+            </p>
+            <ul class="project-card__features">
+              <li>Cadastro de usuários e controle de permissões</li>
+              <li>Cadastro de clientes e produtos</li>
+              <li>Registro e consulta de pedidos</li>
+              <li>Relatórios</li>
+              <li>Integração com SQL Server</li>
+            </ul>
+          </div>
+          <div class="project-card__actions">
+            <!-- TODO: adicionar link do projeto -->
+            <a href="https://github.com/Marcospcassiano/NavCodeControl" class="btn btn--sm btn--primary">Ver projeto</a>
+            <!-- TODO: adicionar link do repositório no GitHub -->
+            <a href="https://github.com/Marcospcassiano/NavCodeControl" class="btn btn--sm btn--ghost">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__glow" aria-hidden="true"></div>
+          <div class="project-card__body">
+            <h3>NavCode CandyManager</h3>
+            <div class="tag-list tag-list--sm">
+              <span>Sistema de gerenciamento de estoque</span><span>e Pedidos</span>
+            </div>
+            <p class="project-card__desc">
+              Projeto criado com fim de gerenciamento de estoque, pedidos, clientes, devoluçoes e relatorios de Um amigo pessoal
+
+            </p>
+            <ul class="project-card__features">
+            
+              <li>Cadastro de clientes e produtos</li>
+              <li>Registro e consulta de pedidos</li>
+              <li>Relatórios</li>
+              <li>Integração com SQL Server</li>
+            </ul>
+          </div>
+          <div class="project-card__actions">
+            <!-- TODO: adicionar link do projeto -->
+            <a href="https://github.com/Marcospcassiano/NavCodeCandyManager" class="btn btn--sm btn--primary">Ver projeto</a>
+            <!-- TODO: adicionar link do repositório no GitHub -->
+            <a href="https://github.com/Marcospcassiano/NavCodeCandyManager" class="btn btn--sm btn--ghost">GitHub</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FORMAÇÃO ===== -->
+  <section class="section section--alt" id="formacao">
+    <div class="container">
+      <p class="eyebrow reveal">// formação</p>
+      <h2 class="section-title reveal">Trajetória acadêmica</h2>
+
+      <div class="timeline">
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__tag">em andamento</span>
+            <h3>Bacharelado em Ciência da Computação</h3>
+            <p>Formação com ênfase e interesse em desenvolvimento de software, banco de dados e desenvolvimento web.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIÊNCIA ===== -->
+  <section class="section" id="experiencia">
+    <div class="container">
+      <p class="eyebrow reveal">// experiência prática</p>
+      <h2 class="section-title reveal">Vivência em projetos</h2>
+      <p class="section-subtitle reveal">
+        Ainda não possuo experiências profissionais formais registradas — a prática vem de projetos
+        acadêmicos e pessoais, onde apliquei desenvolvimento de sistemas de ponta a ponta.
+      </p>
+
+      <div class="experience__grid">
+        <div class="experience-card reveal">
+          <h3>Projeto acadêmico</h3>
+          <p class="experience-card__role">Sistema de Biblioteca Infantil</p>
+          <p>Desenvolvimento completo de um sistema desktop em C# e .NET com persistência em SQL Server.</p>
+        </div>
+        <div class="experience-card reveal">
+          <h3>Projeto pessoal</h3>
+          <p class="experience-card__role">Sistema de Gestão e Vendas</p>
+          <p>Construção de um sistema de gestão com controle de usuários, produtos, pedidos e relatórios.</p>
+        </div>
+        <div class="experience-card reveal">
+          <h3>Projeto em equipe</h3>
+          <p class="experience-card__role">NavCode</p>
+          <p>Colaboração no desenvolvimento de sistemas junto à equipe NavCode.</p>
+        </div>
+      </div>
+
+      <!-- TODO: quando houver experiências profissionais, adicione cards aqui seguindo o mesmo padrão -->
+    </div>
+  </section>
+
+  <!-- ===== CURRÍCULO ===== -->
+  <section class="section section--alt" id="curriculo">
+    <div class="container">
+      <p class="eyebrow reveal">// currículo</p>
+      <h2 class="section-title reveal">Resumo profissional</h2>
+
+      <div class="resume">
+        <div class="resume__summary reveal">
+          <p>
+            Estudante de Ciência da Computação com foco em desenvolvimento de software, banco de dados e
+            desenvolvimento web. Experiência prática construída através de projetos pessoais e acadêmicos
+            em C# e .NET, com integração a bancos de dados SQL Server. Em busca de oportunidades de estágio
+            ou primeiro emprego na área de tecnologia para colocar em prática o que foi aprendido e continuar
+            evoluindo como desenvolvedor.
+          </p>
+          <!-- TODO: substitua pelo caminho real do PDF do currículo -->
+          <a href="curriculo.pdf" download class="btn btn--primary">Baixar currículo em PDF</a>
+        </div>
+
+        <div class="resume__card reveal">
+          <div class="resume__card-header">
+            <div class="resume__avatar" aria-hidden="true">
+              <!-- TODO: substituir por <img src="assets/foto.jpg" alt="Foto de Marcos Paulo"> -->
+              <span>MP</span>
+            </div>
+            <div>
+              <h3>Marcos Paulo Corazza Cassiano Leite</h3>
+              <p>Desenvolvedor de Software</p>
+            </div>
+          </div>
+
+          <div class="resume__section">
+            <h4>Formação</h4>
+            <p>Bacharelado em Ciência da Computação</p>
+          </div>
+
+          <div class="resume__section">
+            <h4>Tecnologias principais</h4>
+            <ul class="tag-list tag-list--sm">
+              <li>C#</li><li>.NET</li><li>SQL Server</li><li>JavaScript</li><li>Git</li>
+            </ul>
+          </div>
+
+          <div class="resume__section">
+            <h4>Contato</h4>
+            <ul class="resume__contact">
+              <!-- TODO: preencher com os dados reais -->
+              <li>📍 Monte Belo - MG</li>
+              <li>✉️ marcos199715hs@gmail.com</li>
+              <li>📞 (35) 99841-9468</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="section" id="contato">
+    <div class="container">
+      <p class="eyebrow reveal">// contato</p>
+      <h2 class="section-title reveal">Vamos conversar</h2>
+      <p class="section-subtitle reveal">
+        Estou aberto a oportunidades de estágio, desenvolvedor júnior e crescimento na área de tecnologia.
+      </p>
+
+      <div class="contact__grid">
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome" required />
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          </div>
+          <div class="field">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Enviar mensagem</button>
+          <p class="contact-form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact__links reveal">
+          <!-- TODO: substituir "#" pelo link real -->
+          <a href="https://github.com/Marcospcassiano" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-link__icon" aria-hidden="true">⌥</span>
+            <span>
+              <strong>GitHub</strong>
+              <small>https://github.com/Marcospcassiano</small>
+            </span>
+          </a>
+          <!-- TODO: substituir "#" pelo link real -->
+          <a href="https://www.linkedin.com/in/marcoscassianodev/" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-link__icon" aria-hidden="true">in</span>
+            <span>
+              <strong>LinkedIn</strong>
+              <small>https://www.linkedin.com/in/marcoscassianodev/</small>
+            </span>
+          </a>
+          <!-- TODO: substituir pelo e-mail real -->
+          <a href="marcos199715hs@gmail.com" class="contact-link">
+            <span class="contact-link__icon" aria-hidden="true">@</span>
+            <span>
+              <strong>E-mail</strong>
+              <small>marcos199715hs@gmail.com</small>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year"></span> Marcos Paulo Corazza Cassiano Leite</p>
+    <p class="footer__signature">construído com <span class="accent">&lt;/&gt;</span></p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
